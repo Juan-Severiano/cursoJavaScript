@@ -14,7 +14,8 @@ ValidarCPF.prototype.valida = function() {
     const digito2 = this.criaDigito(cpfParcial + String(digito1))
 
     const newCpf = cpfParcial + digito1 + digito2
-    return newCpf === this.clearCpf
+    if (newCpf === this.clearCpf) return 'Válido'
+    return 'Inválido'
 }
 ValidarCPF.prototype.criaDigito = function(cpfParcial) {
     const cpfArray =  Array.from(cpfParcial)
@@ -33,5 +34,5 @@ ValidarCPF.prototype.isSequencia = function(){
     return sequencia === this.clearCpf
 }
 
-cpf = new ValidarCPF('imagine um cpf aqui...')
+cpf = new ValidarCPF('075.408.303-95')
 console.log(cpf.valida())
