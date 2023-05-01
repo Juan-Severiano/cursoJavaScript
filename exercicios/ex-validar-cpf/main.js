@@ -33,5 +33,5 @@ ValidarCPF.prototype.isSequencia = function(){
     return sequencia === this.clearCpf
 }
 
-cpf = new ValidarCPF('075.408.303-95')
+cpf = new ValidarCPF('imagine um cpf aqui...')
 console.log(cpf.valida())
