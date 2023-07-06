@@ -1,15 +1,8 @@
-const HomeModel = require('../models/HomeModel')
-
-HomeModel.create({
-    title: 'um titulo de teste',
-    description: 'A description to tests'
-})
-  .then(dados => console.log(dados))
-  .catch(e => console.log(e))
-
 exports.homePage = (req, res) => {
-    req.flash('info')
-    res.render('index')
+    res.render('index', {
+        nome : 'test',
+        numbers : [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    })
 }
 
 exports.trataPost = (req, res) => {
