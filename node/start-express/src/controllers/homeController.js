@@ -8,6 +8,7 @@ HomeModel.create({
   .catch(e => console.log(e))
 
 exports.homePage = (req, res) => {
+    req.flash('info')
     res.render('index')
 }
 
