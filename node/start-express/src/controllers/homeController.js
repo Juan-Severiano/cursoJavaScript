@@ -3,5 +3,6 @@ exports.homePage = (req, res) => {
 }
 
 exports.trataPost = (req, res) => {
-    res.send('opa')
+    res.send(`Rapaz, tu enviou isso aqui msm? ${req.body}`)
+    return
 }
